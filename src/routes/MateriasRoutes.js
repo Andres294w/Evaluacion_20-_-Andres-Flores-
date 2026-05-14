@@ -3,10 +3,16 @@ import { getMaterias,InsertMaterias,deleteMateria,updateMaterias } from "../cont
 
 const router = exprees.Router()
 
-router("./")
+router
+
+router("/")
 .get(getMaterias)
 .post(InsertMaterias)
 
-router("./id")
+router
+
+router("/:id")
 .put(updateMaterias)
 .delete(deleteMateria)
+
+export default router
