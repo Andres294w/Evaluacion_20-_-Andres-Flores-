@@ -1,18 +1,20 @@
-import EstudiandesModel from "../models/EstudiantesModel.js";
+import EstudiantesModel from "../models/EstudiantesModel.js";
 
-export const getMatricula = async(req,  res)=>{
-    const Especialidades = await EstudiandesModel.find()
-    res.json(Especialidades)
+
+
+export const getEstudiantes = async(req,  res)=>{
+    const Estudiantes = await EstudiantesModel.find()
+    res.json(Estudiantes)
 }
 
-export const updateMatricula = async (req,res)=> {
+export const updateEstudiantes = async (req,res)=> {
     const{specialtyName,isAvailable} = req.body;
-    await EstudiandesModel.findByAndIdUpdate(req.params.id,{specialtyName,isAvailable},{new:true})
-        res.json({message : "Especialidades actualizado"})
+    await EstudiantesModel.findByAndIdUpdate(req.params.id,{specialtyName,isAvailable},{new:true})
+        res.json({message : "Estudiantes actualizado"})
 
 }
 
-export const deleteMatricula = async (req,res)=>{
-    await EstudiandesModel.findByAndIdDelete(req.params);
-    res.json({message:"Especialidadesricula delete"})
+export const deleteEstudiantes = async (req,res)=>{
+    await EstudiantesModel.findByAndIdDelete(req.params);
+    res.json({message:"Estudiantes delete"})
 }
