@@ -1,17 +1,13 @@
 import exprees from "express";
-import { getMaterias,InsertMaterias,deleteMateria,updateMaterias } from "../controller/Materiascontroller";
+import { getMaterias,InsertMaterias,deleteMateria,updateMaterias } from "../controller/Materiascontroller.js";
 
 const router = exprees.Router()
 
-router
-
-router("/")
+router.route("/")
 .get(getMaterias)
 .post(InsertMaterias)
 
-router
-
-router("/:id")
+router.route("/:id")
 .put(updateMaterias)
 .delete(deleteMateria)
 

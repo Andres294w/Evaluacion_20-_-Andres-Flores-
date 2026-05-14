@@ -1,11 +1,11 @@
 import mongosee from "mongoose"
-import config  from "./config.js"
+import {config}  from "./config.js"
  
-mongosee.connect(config.db.URI)
+mongosee.connect("mongodb://localhost:27017/matricula2026")
 
 const connection = mongosee.connection
 
-connection.onde ("open" , () => {
+connection.once ("open" , () => {
     console.log("DB is connected")
 })
 

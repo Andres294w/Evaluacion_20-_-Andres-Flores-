@@ -6,7 +6,7 @@ const MatriculaSchema = new Schema(
    amount:{type:Number},
    paymentDate:{type:Number},
    method:{type:String},
-   status:false,
+   status:{type:Boolean},
    referenceNumber:{type:String}
 
 },

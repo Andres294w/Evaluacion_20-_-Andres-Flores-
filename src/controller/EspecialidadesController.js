@@ -7,7 +7,7 @@ export const getEspecialidades = async(req,  res)=>{
 
 export const InsertEspecialidades = async(req,res) => {
     const {specialtyName,isAvailable} = req.body
-    const newEspecialidadesModel = ({specialtyName,isAvailabler})
+    const newEspecialidadesModel = ({specialtyName,isAvailable})
     await newEspecialidadesModel.save()
     res.json({message : "Especialidades save"})
 }

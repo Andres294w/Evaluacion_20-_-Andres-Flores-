@@ -1,15 +1,14 @@
 import express from "express"
+import Materias from "./src/routes/MateriasRoutes.js"
+import Matricula from "./src/routes/MatriculaRouter.js"
+import Especialidades from "./src/routes/EspecialidadesRouter.js";
 
 const app = express();
 
-app.use (cors({
-    origin: ("http//localhost:5173","http//localhost:5174"),
-
-    credentials: true
-}))
-
-app.use (limiter);
-
-app.use (cookiParser());
-
 app.use (express.json());
+
+app.use("/api/Materias", Materias);
+app.use("/api/Matricula", Matricula);
+app.use("/api/Especialidades" , Especialidades)
+
+export default app
