@@ -6,13 +6,13 @@ const EstudiantesSchema = new Schema(
  lastName: {type:String},
  email: {type:String},
 password: {type:String},
- birthdate:{type:Date},
- speciality_id,
+birthdate:{type:Date},
+speciality_id:{type:String},
 carnet: {type:String} ,
 phone: {type:String},
 isVerified:{type:Number},
 loginAttempts:{type:Boolean},
-timeOut:{type:Date},
+timeOut:{type:Date}
 },{ 
     timestrap: true,
     stric:false
