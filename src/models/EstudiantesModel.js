@@ -6,13 +6,16 @@ const EstudiantesSchema = new Schema(
  lastName: {type:String},
  email: {type:String},
 password: {type:String},
- birthdate,
+ birthdate:{type:Date},
  speciality_id,
 carnet: {type:String} ,
 phone: {type:String},
-isVerified,
-loginAttempts,
-timeOut,
-}
+isVerified:{type:Number},
+loginAttempts:{type:Boolean},
+timeOut:{type:Date},
+},{ 
+    timestrap: true,
+    stric:false
+ });
 
-)
+ export default model("Estudiantes", EstudiantesSchema);
